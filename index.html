@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Loan Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header" id="mainHeader">
+            <h1>View Loan Details</h1>
+        </header>
+
+        <div class="main-loan-details-wrapper" id="mainLoanDetailsWrapper">
+            <div class="main-content">
+                <section class="user-profile card">
+                    <div class="user-profile-top">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="user-details">
+                                <h2>Muhammad Riyyan Mukhtar</h2>
+                                <span class="loan-id">909105000490 <i class="fas fa-copy copy-icon" title="Copy Loan ID"></i></span>
+                            </div>
+                        </div>
+                        <div class="user-actions">
+                            <button class="btn btn-accent-outline">Add Loan</button>
+                            <button class="btn btn-primary-outline">View All Loans</button>
+                            <div class="dropdown">
+                                <button class="btn btn-primary-filled dropdown-btn">Borrower Loans Statement <i class="fas fa-caret-down"></i></button>
+                                <div class="dropdown-content">
+                                    <a href="#">Statement Option 1</a>
+                                    <a href="#">Statement Option 2</a>
+                                    <a href="#">Statement Option 3</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-heartbeat icon-health-meter"></i> Health Meter
+                        </div>
+                        <div class="meta-item">
+                            <a href="#" class="link" id="moveBorrowerLink">Edit Move Borrower to Another Branch</a>
+                        </div>
+                        <div class="meta-item">
+                            Create Date: 03/01/2025
+                        </div>
+                        <div class="meta-item">
+                            Age: 19 years
+                        </div>
+                        <div class="meta-item">
+                            Loan Officer: Shazia Noreen
+                        </div>
+                    </div>
+                </section>
+
+                <section class="borrower-details card">
+                    <div class="details-grid">
+                        <div class="detail-group">
+                            <span class="detail-label"><i class="fas fa-map-marker-alt"></i> <a href="#" class="open-maps-link">Open Google Maps</a></span>
+                            <span class="detail-value">Address: Mohallah Latifal Naushera Dist Khushab</span>
+                        </div>
+                        <div class="detail-group">
+                            <span class="detail-label">Mobile:</span>
+                            <span class="detail-value mobile-value">03279446765 <button class="btn btn-accent btn-send-sms">Send SMS</button></span>
+                        </div>
+                        <div class="detail-group">
+                            <span class="detail-label">Borrower CNIC #:</span>
+                            <span class="detail-value">3820114198415</span>
+                        </div>
+                        <div class="detail-group">
+                            <span class="detail-label">Religion:</span>
+                            <span class="detail-value">Islam</span>
+                        </div>
+                        <div class="detail-group">
+                            <span class="detail-label">Parentage/Spouse Name:</span>
+                            <span class="detail-value">Mukhtar Ahmed</span>
+                        </div>
+
+                        <div class="show-more-details" id="showMoreDetails">
+                            <div class="detail-group">
+                                <span class="detail-label">Occupation:</span>
+                                <span class="detail-value">Student</span>
+                            </div>
+                            <div class="detail-group">
+                                <span class="detail-label">Education:</span>
+                                <span class="detail-value">High School</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-show-more" onclick="toggleShowMore()">
+                        <i class="fas fa-plus"></i> Show More
+                    </button>
+                </section>
+
+                <section class="loan-restrictions card">
+                    <h3>New Loan Restrictions:</h3>
+                    <div class="restrictions-content">
+                        <div class="restriction-item">
+                            <span class="restriction-label">Max Open Loans (0%)</span>
+                            <span class="restriction-value">0/1</span>
+                        </div>
+                        <div class="restriction-item">
+                            <span class="restriction-label">If Default Loan, stop any new loans?</span>
+                            <span class="restriction-value">Borrower has no default loans</span>
+                        </div>
+                    </div>
+                    <div class="restriction-actions">
+                        <a href="#" class="link">Add/Edit Restriction on Borrower</a>
+                    </div>
+                </section>
+
+                <section class="loan-table-section card">
+                    <div class="table-responsive">
+                        <table class="loan-details-table">
+                            <thead>
+                                <tr>
+                                    <th>Loan#</th>
+                                    <th>Released</th>
+                                    <th>Maturity</th>
+                                    <th>Principal</th>
+                                    <th>Interest Rate</th>
+                                    <th>Interest</th>
+                                    <th>Fees (Non-Deduct)</th>
+                                    <th>Penalty</th>
+                                    <th>Due</th>
+                                    <th>Paid</th>
+                                    <th>Balance</th>
+                                    <th>Fees (Deduct)</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>909105000489-00078</td>
+                                    <td>16/06/2025</td>
+                                    <td>16/06/2026</td>
+                                    <td>50,000.00</td>
+                                    <td>80%/Year</td>
+                                    <td>24,203.00</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>74,203.00</td>
+                                    <td>0</td>
+                                    <td>74,203.00</td>
+                                    <td>5,000.00</td>
+                                    <td><button class="btn btn-status btn-status-processing">IN PROCESS</button></td>
+                                </tr>
+                                <tr>
+                                    <td>909105000491-00079</td>
+                                    <td>01/01/2025</td>
+                                    <td>01/01/2026</td>
+                                    <td>100,000.00</td>
+                                    <td>70%/Year</td>
+                                    <td>35,000.00</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>135,000.00</td>
+                                    <td>50,000.00</td>
+                                    <td>85,000.00</td>
+                                    <td>7,000.00</td>
+                                    <td><button class="btn btn-status btn-status-active">ACTIVE</button></td>
+                                </tr>
+                                <tr>
+                                    <td>909105000492-00080</td>
+                                    <td>10/02/2024</td>
+                                    <td>10/02/2025</td>
+                                    <td>75,000.00</td>
+                                    <td>60%/Year</td>
+                                    <td>22,500.00</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>97,500.00</td>
+                                    <td>97,500.00</td>
+                                    <td>0.00</td>
+                                    <td>6,000.00</td>
+                                    <td><button class="btn btn-status btn-status-completed">COMPLETED</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="move-borrower-wrapper" id="moveBorrowerWrapper">
+            <header class="header">
+                <h1 class="move-borrower-title">Move Borrower to Another Branch</h1>
+            </header>
+            <section class="borrower-summary-card card">
+                <div class="user-profile-top">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="user-details">
+                            <h2>Muhammad Riyyan Mukhtar</h2>
+                            <span class="loan-id">909105000490 <i class="fas fa-copy copy-icon" title="Copy Loan ID"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="borrower-summary-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-heartbeat icon-health-meter"></i> Health Meter
+                    </div>
+                    <div class="meta-item">
+                        <a href="#" class="link">Edit Move Borrower to Another Branch</a>
+                    </div>
+                    <div class="meta-item">
+                        Create Date: 03/01/2025
+                    </div>
+                    <div class="meta-item">
+                        Age: 19 years
+                    </div>
+                    <div class="meta-item">
+                        Loan Officer: Shazia Noreen
+                    </div>
+                </div>
+
+                <div class="borrower-summary-details-grid">
+                    <div class="detail-group">
+                        <span class="detail-label"><i class="fas fa-map-marker-alt"></i> <a href="#" class="open-maps-link">Open Google Maps</a></span>
+                        <span class="detail-value">Address: Mohallah Latifal Naushera Dist Khushab</span>
+                    </div>
+                    <div class="detail-group">
+                        <span class="detail-label">Mobile:</span>
+                        <span class="detail-value mobile-value">03279446765 <button class="btn btn-accent btn-send-sms">Send SMS</button></span>
+                    </div>
+                    <div class="detail-group">
+                        <span class="detail-label">Borrower CNIC #:</span>
+                        <span class="detail-value">3820114198415</span>
+                    </div>
+                    <div class="detail-group">
+                        <span class="detail-label">Religion:</span>
+                        <span class="detail-value">Islam</span>
+                    </div>
+                    <div class="detail-group">
+                        <span class="detail-label">Parentage/Spouse Name:</span>
+                        <span class="detail-value">Mukhtar Ahmed</span>
+                    </div>
+                    <div class="show-more-details" id="moveBorrowerShowMoreDetails">
+                         <div class="detail-group">
+                            <span class="detail-label">Occupation:</span>
+                            <span class="detail-value">Student</span>
+                        </div>
+                        <div class="detail-group">
+                            <span class="detail-label">Education:</span>
+                            <span class="detail-value">High School</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-show-more" onclick="toggleMoveBorrowerShowMore()">
+                    <i class="fas fa-plus"></i> Show More
+                </button>
+            </section>
+
+            <section class="move-borrower-content-section card">
+                <p>Here you can move the above borrower to another branch. Please note that all records associated with this borrower such as loans, repayments, savings accounts, and savings transactions will be moved to the new branch. You will need to switch to the branch that you select below to see this borrower.</p>
+                <div class="tip-box">
+                    <i class="fas fa-lightbulb"></i>
+                    Tip: To move multiple borrowers at once, please visit <a href="#">Admin > Bulk Move Borrowers to Another Branch</a>.
+                </div>
+                <div class="form-group">
+                    <label for="selectBranch">Move Borrower to the following branch:</label>
+                    <select id="selectBranch" class="styled-select">
+                        <option value="A-01 Jaunharabad (002)">A-01 Jaunharabad (002)</option>
+                        <option value="B-02 City Branch (005)">B-02 City Branch (005)</option>
+                        <option value="C-03 Main Branch (001)">C-03 Main Branch (001)</option>
+                    </select>
+                </div>
+            </section>
+            <div class="move-borrower-actions">
+                <button class="btn btn-back" id="backButton">Back</button>
+                <button class="btn btn-submit">Submit</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
